@@ -16,6 +16,13 @@ use Inertia\Inertia;
 |
 */
 
+Route::get('/chirps', function (){
+    return Inertia::render('Chirps/Index', [
+        'title' => "Title from JSX",
+        'subtitle' => 'From PHP to JS'
+    ]);
+});
+
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
